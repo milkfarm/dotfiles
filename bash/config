@@ -1,2 +1,40 @@
-export PS1="\w$ "
-export EDITOR="mate_wait"
+#export PS1="\w$ "
+#export EDITOR="mate_wait"
+export EDITOR="mvim -f"
+export PS1='\[\e[0;36m\][\W] \u\$\[\e[0;0m\] '
+export CLICOLOR=1
+export LSCOLORS=dxfxcxdxbxegedabagacad
+
+HISTFILESIZE=1000
+HISTSIZE=1000
+
+# append rather than overwrite history 
+shopt -s histappend
+# whenever displaying prompt, write the previous line to history
+PROMPT_COMMAND='history -a'
+# correct spelling mistakes
+shopt -s cdspell
+# ignore ls, bg, fg and exit commands
+export HISTIGNORE="&:ls:[bf]g:exit"
+# merge multiple line commands into single line
+shopt -s cmdhist
+# ignore duplicate commands in history list
+export HISTCONTROL="ignoredups"
+# omit commands beginning with a space
+declare -x HISTCONTROL="ignorespace"    
+# history file format
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+
+# change auto-complete from two tabs for list to one tab for inline
+# bind '"\t":menu-complete'
+
+# Remove the Double Tab Requirement
+# see .inputrc
+
+# Ctrl+D exits Bash too conveniently -- specify that it must be pressed twice:
+export IGNOREEOF=1
+
+# Configuration for less
+export LESS=-RFX
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

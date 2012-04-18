@@ -7,3 +7,6 @@ source ~/.bash/config
 if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
+
+# rvm
+if [[ -s "${HOME}/.rvm/scripts/rvm" ]] ; then source "${HOME}/.rvm/scripts/rvm" ; fi

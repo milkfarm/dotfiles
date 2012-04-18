@@ -1,0 +1,5 @@
+_gemdocomplete() {
+  COMPREPLY=($(compgen -W '$(`which ls` $GEMDIR/doc)' -- ${COMP_WORDS[COMP_CWORD]}))
+  return 0
+}
+complete -o default -o nospace -F _gemdocomplete gemdoc

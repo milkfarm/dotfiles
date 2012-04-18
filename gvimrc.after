@@ -1,0 +1,17 @@
+color railscasts2
+if has("gui_macvim")
+  " Fix ri help bug
+  "set noballooneval
+
+  " Command-T for CommandT
+  macmenu &File.New\ Tab key=<D-t>
+  macmenu &File.Open\ Tab\.\.\. key=<nop>
+  map <D-T> :CtrlP<CR>
+  imap <D-T> <Esc>:CtrlP<CR>
+
+  " Command-/ to toggle comments THIS ISNT WORKING!!!
+  "map <D-/> <Plug>NERDCommenterToggle<CR>
+  "imap <D-/> <Esc><Plug>NERDCommenterToggle<CR>i
+  "map <D-/> <Leader>c<space><CR>
+endif
+

@@ -7,10 +7,14 @@ IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
+# autoindent of code while typing it
+IRB.conf[:AUTO_INDENT]=true
+
 %w[rubygems looksee/shortcuts wirble].each do |gem|
   begin
     require gem
-  rescue LoadError
+  rescue LoadError => err
+    warn "Load Error: #{err}"
   end
 end
 
@@ -35,6 +39,7 @@ class Object
   end
 end
 
+# copy a string to the clipboard
 def copy(str)
   IO.popen('pbcopy', 'w') { |f| f << str.to_s }
 end

@@ -1,0 +1,28 @@
+# Remove the Double Tab Requirement
+set show-all-if-ambiguous On
+
+# Ignore case in tab completion
+set completion-ignore-case On
+
+# Expand completions immediately (only in bash terminal)
+$if Bash
+  Space: magic-space
+$endif
+
+# Meta+s -- Cycle through list
+"s": menu-complete
+
+# Incremental searching with Up and Down arrows
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Old behaviour still available with Ctrl+P and Ctrl+N
+# If that prevents Left and Right from working, fix them like this:
+# "\e[C": forward-char
+# "\e[D": backward-char
+
+# Meta+o -- Load the previous command and position the cursor for typing an option
+"o": "f "
+
+# Delete (doesn't seem to be working)
+"\e[3~": delete-char

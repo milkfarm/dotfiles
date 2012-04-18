@@ -1,0 +1,16 @@
+try
+  set transparency=0
+catch
+endtry
+set wrap
+set linespace=2
+set guifont=Menlo:h12
+set guioptions=aAce
+set hidden
+set noignorecase
+
+" Search/Replace in local file
+vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
+
+" Search/Replace in project using Ack
+vnoremap <C-A> <Esc>:Ack! "<C-r><C-w>"<left>

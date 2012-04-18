@@ -1,2 +1,14 @@
 export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
+
+# Mac Lion Xcode 4.2 compiler issue
+export CC=gcc-4.2
+
+# Gemdoc
+export GEMDIR=`gem env gemdir`
+
+# Python PATH for Python
+# The orginal version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH
+

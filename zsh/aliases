@@ -6,28 +6,68 @@ alias ls="ls -F"
 alias l="ls -lAh"
 alias ll="ls -l"
 alias la='ls -A'
+alias lf="ls -l | egrep -v '^d'"	# list files
+alias ldir="ls -l | egrep '^d'"		# list dirs
+
+# find
+alias tree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
+
+# push, pop, dirs
+alias u=pushd  				# use u instead of pushd
+alias o=popd   				# use o instead of popd
+alias d='dirs -v'			# use d instead of dirs -v
+alias xd='pushd +1' 			# use xd instead of pushd +1
+alias cdp='cd `pwd`'
+
+# other
+alias shis="history | grep "		# search history
+
+# apps
+alias tm='mate .'
+alias bb='bbedit -c'
+alias mvm='mvim .'
+
+# mysql
+alias mysqlstop='sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
+alias mysqlstart='sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
 
 # git
-alias gl='git pull'
-alias gp='git push'
-alias gd='git diff'
-alias gc='git commit'
-alias gca='git commit -a'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status'
-alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gts='git status'
+alias gtd='git diff | mvim -f -'
+alias gtdh='git diff HEAD | mvim -f -'
+alias gtco='git checkout -- .'
+alias gta='git add -A && git status'
+alias gtc='git commit -v'
+alias gtac='git add -A && git commit -v'
+alias gtp='git push'
+alias gtu='git pull'
+alias gtl='git log --oneline'
+alias gtb='git branch'
+alias gtch='git checkout develop'
+alias gtchm='git checkout master'
+alias gto='git checkout --'
+alias gtr='git reset HEAD'
+alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
-alias a='autotest -rails'
+alias sc='if [ -x ./script/rails ]; then rails console; elif [ -x ./script/console ]; then script/console; else echo "Rails executable not found."; fi'
+alias sg='if [ -x ./script/rails ]; then rails generate; elif [ -x ./script/generate ]; then script/generate; else echo "Rails executable not found."; fi'
+alias sp='if [ -x ./script/rails ]; then rails plugin; elif [ -x ./script/plugin ]; then script/plugin; else echo "Rails executable not found."; fi'
+alias ss='if [ -x ./script/rails ]; then rails server; elif [ -x ./script/server ]; then script/server; else echo "Rails executable not found."; fi'
+alias tdl='tail -f log/development.log'
+#alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
-alias scaffold='script/generate nifty_scaffold'
-alias migrate='rake db:migrate db:test:clone'
+#alias scaffold='script/generate nifty_scaffold'
+#alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
+alias rtest='ruby -I"lib:test"'
 
 # commands starting with % for pasting from web
 alias %=' '
+
+# Safety
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
