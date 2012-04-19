@@ -21,7 +21,7 @@ shopt -s cmdhist
 # ignore duplicate commands in history list
 export HISTCONTROL="ignoredups"
 # omit commands beginning with a space
-declare -x HISTCONTROL="ignorespace"    
+declare -x HISTCONTROL="ignorespace"
 # history file format
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 
@@ -36,5 +36,3 @@ export IGNOREEOF=1
 
 # Configuration for less
 export LESS=-RFX
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

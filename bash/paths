@@ -1,6 +1,12 @@
 export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
+# add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin
+# include local bin in path
+PATH=$HOME/Documents/bin:$PATH
+export PATH
+
 # Mac Lion Xcode 4.2 compiler issue
 export CC=gcc-4.2
 
@@ -11,4 +17,7 @@ export GEMDIR=`gem env gemdir`
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
+
+# set textmate as default editor
+export EDITOR="mvim -f"
 
