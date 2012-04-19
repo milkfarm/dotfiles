@@ -1,0 +1,29 @@
+#! /bin/sh
+
+urls=(
+https://github.com/tsaleh/vim-align.git
+https://github.com/nathanaelkane/vim-indent-guides.git
+https://github.com/tpope/vim-ragtag.git
+)
+dir=$HOME/.janus
+
+# Create directory
+if [ ! -d "$dir" ]; then
+  echo "Creating directory '$(basename $dir)'..."
+  mkdir $dir
+fi
+cd $dir || exit 1
+
+# Install plugins
+for url in ${urls[@]}; do
+  name=`basename $url`
+  subdir=${name%.*}
+  if [ -d "$subdir" ]; then
+    echo "Skipping '$name' -- Directory exists"
+  else
+    echo "Installing '$name'..."
+    git clone $url
+  fi
+done
+
+exit 0
