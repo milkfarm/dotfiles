@@ -8,7 +8,8 @@ PATH=$HOME/Documents/bin:$PATH
 export PATH
 
 # Mac Lion Xcode 4.2 compiler issue
-export CC=gcc-4.2
+# -> Place in .localrc instead (if needed)
+#export CC=gcc-4.2
 
 # Gemdoc
 export GEMDIR=`gem env gemdir`
