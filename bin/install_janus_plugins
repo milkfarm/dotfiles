@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 urls=(
 https://github.com/tsaleh/vim-align.git
