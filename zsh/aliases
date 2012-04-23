@@ -62,6 +62,8 @@ alias tlog='tail -f log/development.log'
 #alias migrate='rake db:migrate db:test:clone'
 alias rst='touch tmp/restart.txt'
 alias rtest='ruby -I"lib:test"'
+alias rep='RAILS_ENV=production && export RAILS_ENV && echo $RAILS_ENV'
+alias red='RAILS_ENV=development && export RAILS_ENV && echo $RAILS_ENV'
 
 # commands starting with % for pasting from web
 alias %=' '
