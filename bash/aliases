@@ -29,7 +29,7 @@ trash () { mv -iv $@ ~/.Trash/ ; }
 cnt () { ls $@ | wc -l; }
 
 # open files found by ack in mvim
-vack () { mvim -f $(ack -g $@); }
+vack () { mvim -f $(ack -l $@); }
 
 # search: remind yourself of an alias (given some part of it)
 sbash () { grep $@ ~/.bash_profile ; }
