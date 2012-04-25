@@ -1,11 +1,5 @@
-export PATH="~/bin:~/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:$PATH"
+export PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:~/.rvm/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
-
-# add RVM to PATH for scripting
-PATH=$PATH:$HOME/.rvm/bin
-# include local bin in path
-PATH=$HOME/Documents/bin:$PATH
-export PATH
 
 # Mac Lion Xcode 4.2 compiler issue
 # -> Place in .localrc instead (if needed)
