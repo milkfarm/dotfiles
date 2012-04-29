@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-class ProjectCompletion
+class SiteCompletion
   def initialize(command)
     @command = command
   end
@@ -16,9 +16,9 @@ class ProjectCompletion
   end
 
   def directories
-    `ls ~/Documents/Projects/`.split
+    `ls ~/Sites/`.split
   end
 end
 
-puts ProjectCompletion.new(ENV["COMP_LINE"]).matches
+puts SiteCompletion.new(ENV["COMP_LINE"]).matches
 exit 0
