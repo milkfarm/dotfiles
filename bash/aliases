@@ -1,7 +1,9 @@
 . ~/.zsh/aliases
 
 # changing directory to code project
-function c { cd ~/Sites/$1; }
+function c { cd ~/Code/$1; }
+function p { cd ~/Documents/Projects/$1; }
+function s { cd ~/Sites/$1; }
 
 # alternative to "rails" command to use templates
 function railsapp {
@@ -22,15 +24,9 @@ function gemdoc {
 # move files to mac trash can
 trash () { mv -iv $@ ~/.Trash/ ; }
 
-# rails
-# rtest () { ruby -I"lib:test" $@ ; }
-
 # count files of certain pattern
 cnt () { ls $@ | wc -l; }
 
 # open files found by ack in mvim
 vack () { mvim -f $(ack -l $@); }
-
-# search: remind yourself of an alias (given some part of it)
-sbash () { grep $@ ~/.bash_profile ; }
 
