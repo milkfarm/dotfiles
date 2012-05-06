@@ -8,6 +8,7 @@ set guifont=Menlo:h12
 set guioptions=aAce
 set hidden
 set noignorecase
+set nonumber
 
 " Search/Replace in local file
 vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
