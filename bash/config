@@ -8,7 +8,7 @@ export LSCOLORS=dxfxcxdxbxegedabagacad
 HISTFILESIZE=1000
 HISTSIZE=1000
 
-# append rather than overwrite history 
+# append rather than overwrite history
 shopt -s histappend
 # whenever displaying prompt, write the previous line to history
 PROMPT_COMMAND='history -a'
@@ -24,6 +24,9 @@ export HISTCONTROL="ignoredups"
 declare -x HISTCONTROL="ignorespace"
 # history file format
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
 
 # change auto-complete from two tabs for list to one tab for inline
 # bind '"\t":menu-complete'
