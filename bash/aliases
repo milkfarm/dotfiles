@@ -1,9 +1,9 @@
 . ~/.zsh/aliases
 
 # changing directory to code project
-function c { cd ~/Code/$1; }
-function p { cd ~/Documents/Projects/$1; }
-function s { cd ~/Sites/$1; }
+function c { pushd ~/Code/$1; }
+function p { pushd ~/Documents/Projects/$1; }
+function s { pushd ~/Sites/$1; }
 
 # alternative to "rails" command to use templates
 function railsapp {
