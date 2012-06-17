@@ -10,7 +10,7 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 # autoindent of code while typing it
 IRB.conf[:AUTO_INDENT]=true
 
-%w[rubygems looksee/shortcuts wirble].each do |gem|
+%w[rubygems looksee wirble hirb].each do |gem|
   begin
     require gem
   rescue LoadError => err
