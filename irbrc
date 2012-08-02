@@ -18,6 +18,8 @@ IRB.conf[:AUTO_INDENT]=true
   end
 end
 
+Hirb::View.disable if defined?(Hirb)
+
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
