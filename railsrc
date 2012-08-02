@@ -12,3 +12,51 @@ end
 def hide_log
   change_log(nil)
 end
+
+def show_routes(match = nil)
+  Rails.application.reload_routes!
+  all_routes = Rails.application.routes.routes
+
+  require 'rails/application/route_inspector'
+  inspector = Rails::Application::RouteInspector.new
+
+  routes = inspector.format(all_routes, ENV['CONTROLLER'])
+
+  ansi_bold       = "\033[1m"
+  ansi_reset      = "\033[0m"
+
+  if (match)
+    match = match.to_s
+    puts routes.grep(/#{match}/).map { |r|
+      r.gsub!(match, "#{ansi_bold}#{match}#{ansi_reset}")
+    }.join("\n")
+
+  else
+    puts routes.join "\n"
+  end
+end
+
+def print_ps(ps = [])
+  ps = Array(ps).flatten
+  ps.each {|p| puts [p.default_format.isbn, p.name, p.collection.try(:name_extended), p.publisher, p.available_on, p.default_format.status, p.default_format.price, p.default_format.price_on(Product.upcoming_on)].join(", ")}
+end
+
+def print_pfs(pfs = [])
+  pfs = Array(pfs).flatten
+  pfs.each {|pf| puts [pf.isbn, pf.product.name, pf.to_s, pf.product.collection.try(:name_extended), pf.product.publisher, pf.product.available_on, pf.status, pf.price, pf.price_on(Product.upcoming_on)].join(", ")}
+end
+
+def print_pcs(pcs = [])
+  pcs = Array(pcs).flatten
+  pcs.each {|pc| pf = pc.product_format; puts [pf.isbn, pf.product.proprietary_id, pf.product.name, pf.to_s, pf.product.collection.try(:name_extended), pf.product.publisher, pf.product.available_on, pf.status, pf.price, pf.price_on(Product.upcoming_on)].join(", ")}
+end
+
+def print_fs(fs = [])
+  if defined?(Hirb)
+    extend Hirb::Console
+    table fs, :fields => [:id, :name, :units, :requires_valid_isbn]
+  else
+    fs = Array(fs).flatten
+    fs.each {|f| puts [f.id, f.name, f.units, f.requires_valid_isbn].join(", ")}
+  end
+end
