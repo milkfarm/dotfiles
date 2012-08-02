@@ -8,5 +8,5 @@ if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
 
-# rvm
+# rvm: see also bash/paths
 if [[ -s "${HOME}/.rvm/scripts/rvm" ]] ; then source "${HOME}/.rvm/scripts/rvm" ; fi
