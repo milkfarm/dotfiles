@@ -10,6 +10,9 @@ set hidden
 set noignorecase
 set nonumber
 
+" Adjust ctrlp.vim plugin settings, ignore certain files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.csv,*.sql
+
 " Search/Replace in local file
 vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
 
