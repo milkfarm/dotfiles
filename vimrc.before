@@ -1,0 +1,2 @@
+" Disable csv, but keep the bindings to remind me
+call janus#disable_plugin('csv', "I don't like it")
