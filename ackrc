@@ -1,2 +1,10 @@
 --pager=less
 --type-set=haml=.haml
+--type-add=ruby=.rake
+--type-add=css=.scss,.less
+--ignore-dir=pear
+--ignore-dir=tmp
+--ignore-dir=public
+--ignore-dir=protected
+--ignore-dir=coverage
+--ignore-dir=log
