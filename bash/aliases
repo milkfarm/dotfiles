@@ -35,3 +35,6 @@ function epubmk() { epubmk.sh "$@"; }
 
 # Unzip epub file
 function epubopen() { epubopen.sh "$@"; }
+
+# Find shortcuts
+function findn() { find . -name "*${1}*"; }
