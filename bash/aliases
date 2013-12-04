@@ -30,3 +30,8 @@ cnt () { ls $@ | wc -l; }
 # open files found by ack in mvim
 vack () { mvim -f $(ack -l $@); }
 
+# Create epub file using contents of current directory
+function epubmk() { epubmk.sh "$@"; }
+
+# Unzip epub file
+function epubopen() { epubopen.sh "$@"; }
