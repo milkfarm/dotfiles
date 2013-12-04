@@ -1,5 +1,6 @@
 # cd
 alias ..='cd ..'
+alias cdp='cd `pwd`'
 
 # ls
 alias ls="ls -F"
@@ -17,7 +18,6 @@ alias u=pushd  				# use u instead of pushd
 alias o=popd   				# use o instead of popd
 alias d='dirs -v'			# use d instead of dirs -v
 alias xd='pushd +1' 			# use xd instead of pushd +1
-alias cdp='cd `pwd`'
 
 # other
 alias shis="history | grep "		# search history
@@ -64,6 +64,7 @@ alias rst='touch tmp/restart.txt'
 alias rtest='ruby -I"lib:test"'
 alias rep='RAILS_ENV=production && export RAILS_ENV && echo $RAILS_ENV'
 alias red='RAILS_ENV=development && export RAILS_ENV && echo $RAILS_ENV'
+alias epubchk='java -jar ~/Documents/epubcheck-3.0/epubcheck-3.0.jar'
 
 # commands starting with % for pasting from web
 alias %=' '
