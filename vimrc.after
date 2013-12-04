@@ -18,3 +18,27 @@ vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
 
 " Search/Replace in project using Ack
 vnoremap <C-A> <Esc>:Ack! "<C-r><C-w>"<left>
+
+" Map enter to insert newline after current line
+map <CR> o<Esc>
+
+" Map shift-enter to insert newline before current line
+map <S-Enter> O<Esc>
+
+" Map space to insert a single character
+nmap <Space> i_<Esc>r
+
+" Map K to split lines (the opposite of J)
+nmap K i<CR><Esc>k$
+
+" Map cpwd to copy path of current file
+nmap cpwd :let @" = expand("%") <CR>
+
+" Mirror unnamed buffer to OS clipboard
+set clipboard=unnamed
+
+" Common search/replace to remove trailing whitespace
+nmap spc <Esc>:%s/\s\+$//g
+
+" Common search/replace to merge lines, separating with comma
+nmap cma <Esc>:%s/\n/, /g
