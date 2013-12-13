@@ -35,7 +35,7 @@ alias mysqlstart='sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld
 alias gts='git status'
 alias gtd='git diff | mvim -f -'
 alias gtdh='git diff HEAD | mvim -f -'
-alias gtco='git checkout -- .'
+alias gtco='git checkout -- '
 alias gta='git add -A && git status'
 alias gtc='git commit -v'
 alias gtac='git add -A && git commit -v'
@@ -45,8 +45,7 @@ alias gtl='git log --oneline'
 alias gtb='git branch -a'
 alias gtch='git checkout develop'
 alias gtchm='git checkout master'
-alias gto='git checkout --'
-alias gtr='git reset HEAD'
+alias gtr='git reset HEAD '
 alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
