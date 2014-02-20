@@ -15,6 +15,7 @@ function railsapp {
 
 # misc
 alias reload='. ~/.bash_profile'
+alias ctags_generate='ctags -R --exclude=.git --exclude=log --exclude=public --exclude=tmp *'
 
 # Gemdoc
 function gemdoc {
