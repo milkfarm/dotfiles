@@ -42,3 +42,12 @@ nmap spc <Esc>:%s/\s\+$//g
 
 " Common search/replace to merge lines, separating with comma
 nmap cma <Esc>:%s/\n/, /g
+
+" Common search/replace to update ruby hash synax
+nmap hsh <Esc>:s/:\(\w\+\) => /\1: /gc
+
+" Common search/replace to update ruby hash synax
+nmap qt <Esc>:s/"/'/gc
+
+" NERDTreeFind
+nmap ,m :NERDTreeFind<CR>
