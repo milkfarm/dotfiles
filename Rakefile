@@ -57,10 +57,9 @@ desc "Uninstall by removing symlinks if they exist. Optional: debug, verbose."
 task :uninstall do
   debug = str_to_boolean(ENV['debug'], :default => false)
   verbose = (debug || str_to_boolean(ENV['verbose'], :default => true))
-  names = %w(.ackrc .bash .bash_profile .bashrc .bin .editrc .gemrc .gitignore .gvimrc.after .gvimrc.before .inputrc .irbrc .railsrc .tmux.conf .vimrc.after .vimrc.before)
   replace_all = false
-  names.each do |name|
-    file = File.join(ENV['HOME'], name)
+  Dir['*'].each do |name|
+    file = File.join(ENV['HOME'], ".#{name}")
     if File.symlink?(file)
       if replace_all
         remove_link(file, :debug => debug, :verbose => verbose)
