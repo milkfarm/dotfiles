@@ -113,6 +113,10 @@ function epubopen() { epubopen.sh "$@"; }
 # Find shortcuts
 function findn() { find . -name "*${1}*"; }
 
+# Whois IP lookup shortcut
+#function whoip() { whois -h whois.geektools.com "*{1}*"; }
+alias whoip="whois -h whois.geektools.com "
+
 # Ingest files in user directories
 alias ingest="bundle exec rails runner -e development 'Ingestion.process_user_directories(mtime: 1)'"
 
