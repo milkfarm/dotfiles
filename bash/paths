@@ -16,3 +16,5 @@ export PATH
 # set textmate as default editor
 export EDITOR="mvim -f"
 
+# Register the ONIX DTD in the system XML Catalog
+export XML_CATALOG_FILES="/usr/local/etc/xml/catalog/onix/catalog.xml $XML_CATALOG_FILES"
