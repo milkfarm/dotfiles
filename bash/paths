@@ -13,7 +13,7 @@ export GEMDIR=`gem env gemdir`
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
-# set textmate as default editor
+# Set MacVim as the default editor
 export EDITOR="mvim -f"
 
 # Register the ONIX DTD in the system XML Catalog
