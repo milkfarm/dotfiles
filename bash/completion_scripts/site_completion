@@ -16,7 +16,7 @@ class SiteCompletion
   end
 
   def directories
-    `ls ~/Sites/`.split
+    `ls $SITES/`.split
   end
 end
 

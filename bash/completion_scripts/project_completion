@@ -16,7 +16,7 @@ class ProjectCompletion
   end
 
   def directories
-    `ls /Volumes/ext-macpro/Documents/Projects/`.split
+    `ls $PROJECTS/`.split
   end
 end
 

@@ -16,7 +16,7 @@ class CodeCompletion
   end
 
   def directories
-    `ls /Volumes/ext-macpro/Code/`.split
+    `ls $CODE/`.split
   end
 end
 

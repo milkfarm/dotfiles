@@ -74,9 +74,9 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 # changing directory to code project
-function c { pushd /Volume/ext-macpro/Code/$1; }
-function p { pushd /Volume/ext-macpro/Documents/Projects/$1; }
-function s { pushd ~/Sites/$1; }
+function c { pushd $CODE/$1; }
+function p { pushd $PROJECTS/$1; }
+function s { pushd $SITES/$1; }
 
 # alternative to "rails" command to use templates
 function railsapp {
