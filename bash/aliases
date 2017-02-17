@@ -11,7 +11,7 @@ alias lf="ls -l | egrep -v '^d'"	# list files
 alias ldir="ls -l | egrep '^d'"		# list dirs
 
 # find
-alias tree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
+alias ltree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
 
 # push, pop, dirs
 alias u=pushd  				# use u instead of pushd
