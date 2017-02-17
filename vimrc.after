@@ -1,3 +1,6 @@
+" Enable matchit for rubyblock plugin
+runtime macros/matchit.vim
+
 try
   set transparency=0
 catch
@@ -7,11 +10,35 @@ set linespace=2
 set guifont=Menlo:h12
 set guioptions=aAce
 set hidden
-set noignorecase
-set nonumber
+set relativenumber
+set number
+syntax enable
+set textwidth=80
+if exists('+colorcolumn')
+  set colorcolumn=+1
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+highlight ColorColumn ctermbg=235 guibg=#252525
+let &colorcolumn=join(range(81,999),",")
+
+" Search
+set incsearch  " Highlight while searching
+set hlsearch   " Highlight matches after searching
+nmap <leader>h :nohlsearch<CR>
+
+" Case-insensitive command completion
+"set noignorecase
+set fileignorecase
+set wildignorecase
+"nnoremap / /\C
 
 " Adjust ctrlp.vim plugin settings, ignore certain files
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.csv,*.sql
+
+" Ack
+cnoreabbrev Ack Ack!
+nnoremap <leader>a :Ack!<Space>
 
 " Search/Replace in local file
 vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
@@ -51,3 +78,61 @@ nmap qt <Esc>:s/"/'/gc
 
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
+
+" Windows
+"set winwidth=84
+"set winheight=5
+"set winminheight=5
+"set winheight=999
+"let g:golden_ratio_autocommand = 0
+"nmap <C-w>- :GoldenRatioResize<CR>
+"nmap <C-w>t :GoldenRatioToggle<CR>
+map <leader>q :close<CR>
+map <leader>w <C-w>w
+
+" Automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" Zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<CR>:wincmd \|<CR>
+nnoremap <leader>= :wincmd =<CR>
+
+" Splits
+set splitright
+set splitbelow
+
+" Vim Tmux Runner - Connect Vim and tmux to allow running lines & commands
+nnoremap <leader>va :VtrAttachToPane<CR>
+nnoremap <leader>vf :VtrFocusRunner<CR>
+nnoremap <leader>vl :VtrSendLinesToRunner<CR>
+nnoremap <leader>vc :VtrSendCommandToRunner<CR>
+nnoremap <leader>osh :VtrOpenRunner {'orientation': 'h', 'percentage': 50}<CR>
+nnoremap <leader>irb :VtrOpenRunner {'orientation': 'h', 'percentage': 50, 'cmd': 'irb'}<CR>
+
+" Some settings to enable the theme:
+set background=dark
+let g:solarized_termcolors = 256
+let g:solarized_termtrans = 1
+colorscheme solarized
+
+" Status line
+set statusline=%f
+set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
+set statusline+=\ %{fugitive#statusline()}
+set statusline+=\ %{rvm#statusline()}
+set statusline+=\ Line:%l\/%L
+set statusline+=\ Col:%c
+
+let test#strategy = 'terminal'
+nmap <silent> <leader>tt :TestNearest<CR>
+nmap <silent> <leader>TT :TestFile<CR>
+nmap <silent> <leader>ta :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tg :TestVisit<CR>
+
+let g:vim_browser = 'safari'
+let g:vim_domain = 'http://titleleaf.dev'
+nnoremap <leader>v :OpenViewInBrowser<CR>
+source ~/.dotfiles/vim/open_view_in_browser.vim
+
+source ~/.dotfiles/vim/tabline.vim
