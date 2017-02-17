@@ -26,6 +26,7 @@ alias shis="history | grep "		# search history
 alias tm='mate .'
 alias bb='bbedit -c'
 alias mvm='mvim .'
+alias vm='vim .'
 
 # mysql
 alias mysqlstop='sudo launchctl unload -w /Library/LaunchDaemons/com.mysql.mysqld.plist'
