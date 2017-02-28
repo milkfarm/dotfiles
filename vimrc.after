@@ -146,3 +146,4 @@ nnoremap <leader>v :OpenViewInBrowser<CR>
 source ~/.dotfiles/vim/open_view_in_browser.vim
 
 source ~/.dotfiles/vim/tabline.vim
+source ~/.dotfiles/vim/ctags.vim
