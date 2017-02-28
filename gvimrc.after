@@ -1,6 +1,7 @@
 " Colors
 colorscheme railscasts2
 highlight ColorColumn ctermbg=235 guibg=#252525
+highlight Search guibg=#447788 guifg=#66eeff
 
 " Tabs
 set guitablabel=%N:%M%t
