@@ -10,11 +10,13 @@ if has("gui_macvim")
   " Fix ri help bug
   "set noballooneval
 
-  " Command-T for CommandT
+  " Override MacVim commands for creating tab
   macmenu &File.New\ Tab key=<D-t>
   macmenu &File.Open\ Tab\.\.\. key=<nop>
-  "map <D-T> :CtrlP<CR>
-  "imap <D-T> <Esc>:CtrlP<CR>
+
+  " Map command-T to CtrlP
+  map <D-T> :CtrlPMRU<CR>
+  imap <D-T> <Esc>:CtrlPMRU<CR>
 
   " Command-/ to toggle comments THIS ISNT WORKING!!!
   "map <D-/> <Plug>NERDCommenterToggle<CR>
