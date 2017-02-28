@@ -133,6 +133,7 @@ set statusline+=\ Line:%l\/%L
 set statusline+=\ Col:%c
 
 let test#strategy = 'terminal'
+let g:test#preserve_screen = 1
 nmap <silent> <leader>tt :TestNearest<CR>
 nmap <silent> <leader>TT :TestFile<CR>
 nmap <silent> <leader>ta :TestSuite<CR>
