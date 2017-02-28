@@ -46,8 +46,23 @@ set wildignorecase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.csv,*.sql
 
 " Ack
-cnoreabbrev Ack Ack!
 nnoremap <leader>a :Ack!<Space>
+
+" Use Ag (the silver searcher) in place of Ack
+cnoreabbrev ag Ack!
+cnoreabbrev aG Ack!
+cnoreabbrev Ag Ack!
+cnoreabbrev AG Ack!
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " CtrlP cache not needed if using ag
+  let g:ctrlp_use_caching = 0
+endif
 
 " Search/Replace in local file
 vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
