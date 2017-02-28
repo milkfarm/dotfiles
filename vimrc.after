@@ -1,6 +1,11 @@
 " Enable matchit for rubyblock plugin
 runtime macros/matchit.vim
 
+" Rapid editing of vimrc
+nmap <leader>ve :tabedit $HOME/.vimrc.after<CR>
+nmap <leader>vs :source $MYVIMRC<CR>
+
+" Options
 try
   set transparency=0
 catch
