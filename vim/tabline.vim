@@ -1,6 +1,6 @@
 " Tabs
 set tabline=%!MyTabLine()  " custom tab pages line
-function MyTabLine()
+function! MyTabLine()
   let s = '' " complete tabline goes here
   " loop through each tab page
   for t in range(tabpagenr('$'))
