@@ -89,7 +89,8 @@ nmap <Space> i_<Esc>r
 nmap K i<CR><Esc>k$
 
 " Map cpwd to copy path of current file
-nmap cpwd :let @" = expand("%") <CR>
+"nmap cpwd :let @" = expand("%") <CR>
+nmap cpwd :let @+ = @% <CR>
 
 " Mirror unnamed buffer to OS clipboard
 set clipboard=unnamed
