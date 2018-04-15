@@ -46,7 +46,10 @@ set wildignorecase
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.csv,*.sql
 "let g:ctrlp_map = '<c-p>'
 "let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'a'
+"let g:ctrlp_working_path_mode = 'ra'
+"let g:ctrlp_working_path_mode = 'c'
+let g:ctrlp_working_path_mode = 'r'
+let g:ctrlp_by_filename = 1  " Set filename-search as default
 
 " Ack
 nnoremap <leader>a :Ack!<Space>
