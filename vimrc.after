@@ -165,6 +165,9 @@ set statusline+=\ %{rvm#statusline()}
 set statusline+=\ Line:%l\/%L
 set statusline+=\ Col:%c
 
+" Apply ruby syntax to *.thor files
+autocmd BufNewFile,BufRead *.thor set syntax=ruby
+
 let test#strategy = 'terminal'
 let g:test#preserve_screen = 1
 nmap <silent> <leader>tt :TestNearest<CR>
