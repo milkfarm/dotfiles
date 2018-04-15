@@ -110,6 +110,17 @@ nmap qt <Esc>:s/"/'/gc
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
 
+" EasyMotion
+" Disable default mappings
+"let g:EasyMotion_do_mapping = 0
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+"map <Leader> <Plug>(easymotion-prefix)
+nmap s <Plug>(easymotion-overwin-f)
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
+
 " Windows
 "set winwidth=84
 "set winheight=5
@@ -119,7 +130,7 @@ nmap ,m :NERDTreeFind<CR>
 "nmap <C-w>- :GoldenRatioResize<CR>
 "nmap <C-w>t :GoldenRatioToggle<CR>
 map <leader>q :close<CR>
-map <leader>w <C-w>w
+"map <leader>w <C-w>w
 
 " Automatically rebalance windows on vim resize
 autocmd VimResized * :wincmd =
