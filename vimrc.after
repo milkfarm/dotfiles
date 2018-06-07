@@ -99,13 +99,16 @@ set clipboard=unnamed
 nmap spc <Esc>:%s/\s\+$//g
 
 " Common search/replace to merge lines, separating with comma
-nmap cma <Esc>:%s/\n/, /g
+nmap cma <Esc>:%s/\n/, /g<left><left><left>
 
 " Common search/replace to update ruby hash synax
-nmap hsh <Esc>:s/:\(\w\+\) => /\1: /gc
+nmap hsh <Esc>:%s/:\(\w\+\) => /\1: /gc
 
 " Common search/replace to update ruby hash synax
 nmap qt <Esc>:s/"/'/gc
+
+" Common search/replace to setup debug line
+nmap dbg <Esc>:s/var//g<left><left>
 
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
