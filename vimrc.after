@@ -110,6 +110,9 @@ nmap qt <Esc>:s/"/'/gc
 " Common search/replace to setup debug line
 nmap dbg <Esc>:s/var//g<left><left>
 
+" Common search/replace to wrap erb lines
+nmap wrp <Esc>:s/, /,\r      /g<left><left>
+
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
 
