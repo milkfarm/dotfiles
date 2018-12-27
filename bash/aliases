@@ -34,6 +34,7 @@ alias mysqlstart='sudo launchctl load -w /Library/LaunchDaemons/com.mysql.mysqld
 
 # git
 alias gts='git status'
+alias gtsl='git stash list'
 alias gtd='git diff | mvim -f -'
 alias gtdh='git diff HEAD | mvim -f -'
 alias gtco='git checkout -- '
