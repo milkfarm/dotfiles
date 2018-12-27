@@ -88,6 +88,9 @@ nmap <Space> i_<Esc>r
 " Map K to split lines (the opposite of J)
 nmap K i<CR><Esc>k$
 
+" Map ccis to insert [ci skip]
+nmap ccis o<CR>[ci skip]<Esc>
+
 " Map cpd to copy path of current file
 "nmap cpd :let @" = expand("%") <CR>
 nmap cpd :let @+ = @% <CR>
