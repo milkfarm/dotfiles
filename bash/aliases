@@ -53,10 +53,10 @@ alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
-alias sc='if [ -x ./script/rails ]; then rails console; elif [ -x ./script/console ]; then script/console; else echo "Rails executable not found."; fi'
-alias sg='if [ -x ./script/rails ]; then rails generate; elif [ -x ./script/generate ]; then script/generate; else echo "Rails executable not found."; fi'
-alias sp='if [ -x ./script/rails ]; then rails plugin; elif [ -x ./script/plugin ]; then script/plugin; else echo "Rails executable not found."; fi'
-alias ss='if [ -x ./script/rails ]; then rails server; elif [ -x ./script/server ]; then script/server; else echo "Rails executable not found."; fi'
+alias sc='if [ -x ./bin/rails ]; then rails console; elif [ -x ./script/console ]; then script/console; else echo "Rails executable not found."; fi'
+alias sg='if [ -x ./bin/rails ]; then rails generate; elif [ -x ./script/generate ]; then script/generate; else echo "Rails executable not found."; fi'
+alias sp='if [ -x ./bin/rails ]; then rails plugin; elif [ -x ./script/plugin ]; then script/plugin; else echo "Rails executable not found."; fi'
+alias ss='if [ -x ./bin/rails ]; then rails server; elif [ -x ./script/server ]; then script/server; else echo "Rails executable not found."; fi'
 alias tdl='tail -f log/development.log'
 #alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
