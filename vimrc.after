@@ -76,6 +76,12 @@ vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
 " Search/Replace in project using Ack
 vnoremap <C-A> <Esc>:Ack! "<C-r><C-w>"<left>
 
+" Ack word under cursor
+map A* *<C-O>viw<C-A>
+
+" Count occurences of word under cursor
+map ,* *<C-O>:%s///gn<CR>
+
 " Map enter to insert newline after current line
 map <CR> o<Esc>
 
@@ -138,6 +144,7 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 "let g:golden_ratio_autocommand = 0
 "nmap <C-w>- :GoldenRatioResize<CR>
 "nmap <C-w>t :GoldenRatioToggle<CR>
+nmap <C-w>t :tabe %<CR>
 map <leader>q :close<CR>
 "map <leader>w <C-w>w
 
