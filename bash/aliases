@@ -125,3 +125,7 @@ alias ingest="bundle exec rails runner -e development 'Ingestion.process_user_di
 
 # Recreate elasticsearch index
 alias esimport="bundle exec rake environment elasticsearch:import:model CLASS='Product' FORCE=y"
+
+# Check aiven backup
+alias aiven="c aiven_api && aiven-last-backup.rb -e tim@propulsion.co -j tim-1a0b -s elasticsearch5"
+
