@@ -1,4 +1,4 @@
-export PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:~/.rvm/bin:$PATH"
+export PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:~/.rvm/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 
 # Mac Lion Xcode 4.2 compiler issue
