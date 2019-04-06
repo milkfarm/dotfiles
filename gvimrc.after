@@ -15,8 +15,14 @@ if has("gui_macvim")
   macmenu &File.Open\ Tab\.\.\. key=<nop>
 
   " Map command-T to CtrlP
-  map <D-T> :CtrlPMRU<CR>
-  imap <D-T> <Esc>:CtrlPMRU<CR>
+  "map <D-T> :CtrlPMRU<CR>
+  "imap <D-T> <Esc>:CtrlPMRU<CR>
+
+  " Map command-T to fzf
+  map <D-T> :Files<CR>
+  imap <D-T> <Esc>:Files<CR>
+  map <D-H> :History<CR>
+  imap <D-H> <Esc>:History<CR>
 
   " Command-/ to toggle comments THIS ISNT WORKING!!!
   "map <D-/> <Plug>NERDCommenterToggle<CR>

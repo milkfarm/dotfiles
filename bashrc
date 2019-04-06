@@ -13,3 +13,5 @@ if [[ -s "${HOME}/.rvm/scripts/rvm" ]] ; then source "${HOME}/.rvm/scripts/rvm" 
 
 # RVM creates the following entry. Place in bash/paths instead.
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

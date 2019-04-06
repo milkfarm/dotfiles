@@ -56,9 +56,9 @@ nnoremap <leader>a :Ack!<Space>
 
 " Use Ag (the silver searcher) in place of Ack
 cnoreabbrev ag Ack!
-cnoreabbrev aG Ack!
-cnoreabbrev Ag Ack!
-cnoreabbrev AG Ack!
+"cnoreabbrev aG Ack!
+"cnoreabbrev Ag Ack!
+"cnoreabbrev AG Ack!
 if executable('ag')
   " Use ag over grep
   set grepprg=ag\ --nogroup\ --nocolor
