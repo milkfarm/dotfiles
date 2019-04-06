@@ -76,6 +76,9 @@ vnoremap <C-R> <Esc>:%s/<C-r>+//gc<left><left><left>
 " Search/Replace in project using Ack
 vnoremap <C-A> <Esc>:Ack! "<C-r><C-w>"<left>
 
+" Search/Replace word under cursor
+nnoremap R* :%s/<C-r><C-w>//gc<left><left><left>
+
 " Ack word under cursor
 map A* *<C-O>viw<C-A>
 
@@ -114,7 +117,7 @@ nmap cma <Esc>:%s/\n/, /g<left><left><left>
 nmap hsh <Esc>:%s/:\(\w\+\) => /\1: /gc
 
 " Common search/replace to update ruby hash synax
-nmap qt <Esc>:s/"/'/gc
+nmap qt <Esc>:s/"/'/g
 
 " Common search/replace to setup debug line
 nmap dbg <Esc>:s/var//g<left><left>
