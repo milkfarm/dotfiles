@@ -124,7 +124,7 @@ alias whoip="whois -h whois.geektools.com "
 alias ingest="bundle exec rails runner -e development 'Ingestion.process_user_directories(mtime: 1)'"
 
 # Recreate elasticsearch index
-alias esimport="bundle exec rake environment elasticsearch:import:model CLASS='Product' FORCE=y"
+alias esimport="bundle exec bin/rake environment elasticsearch:import:model CLASS='Product' FORCE=y; bundle exec bin/rake environment elasticsearch:import:model CLASS='EditorialReview' FORCE=y"
 
 # Check aiven backup
 alias aiven="c aiven_api && aiven-last-backup.rb -e tim@propulsion.co -j tim-1a0b -s elasticsearch5"
