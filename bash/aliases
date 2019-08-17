@@ -66,7 +66,8 @@ alias rst='touch tmp/restart.txt'
 alias rtest='ruby -I"lib:test"'
 alias rep='RAILS_ENV=production && export RAILS_ENV && echo $RAILS_ENV'
 alias red='RAILS_ENV=development && export RAILS_ENV && echo $RAILS_ENV'
-alias epubchk='java -jar ~/Documents/epubcheck-3.0.1/epubcheck-3.0.1.jar'
+alias epubchk='java -jar ~/Documents/epubcheck-4.2.1/epubcheck.jar'
+alias epubchk3='java -jar ~/Documents/epubcheck-3.0.1/epubcheck-3.0.1.jar'
 
 # commands starting with % for pasting from web
 alias %=' '
