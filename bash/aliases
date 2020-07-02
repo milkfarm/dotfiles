@@ -50,6 +50,7 @@ alias gtchd='git checkout develop'
 alias gtchm='git checkout master'
 alias gtr='git reset HEAD '
 alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias gtsh="git show --pretty"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
