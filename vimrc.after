@@ -110,8 +110,11 @@ set clipboard=unnamed
 " Common search/replace to remove trailing whitespace
 nmap spc <Esc>:%s/\s\+$//g
 
-" Common search/replace to merge lines, separating with comma
+" Common search/replace to join lines, separating with comma
 nmap cma <Esc>:%s/\n/, /g<left><left><left>
+
+" Common search/replace to split lines, separating on comma
+nmap ret <Esc>:s/, /\r/g<left><left>
 
 " Common search/replace to update ruby hash synax
 nmap hsh <Esc>:%s/:\(\w\+\) => /\1: /gc
