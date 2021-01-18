@@ -54,11 +54,8 @@ alias gtsh="git show --pretty"
 alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
 
 # rails
-alias sc='if [ -x ./bin/rails ]; then rails console; elif [ -x ./script/console ]; then script/console; else echo "Rails executable not found."; fi'
 alias rc='if [ -x ./bin/rails ]; then rails console; else echo "Rails executable not found."; fi'
 alias rct='if [ -x ./bin/rails ]; then rails console -e test; else echo "Rails executable not found."; fi'
-alias sg='if [ -x ./bin/rails ]; then rails generate; elif [ -x ./script/generate ]; then script/generate; else echo "Rails executable not found."; fi'
-alias ss='if [ -x ./bin/rails ]; then rails server; elif [ -x ./script/server ]; then script/server; else echo "Rails executable not found."; fi'
 alias tdl='tail -f log/development.log'
 #alias a='autotest -rails'
 alias tlog='tail -f log/development.log'
