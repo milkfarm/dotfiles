@@ -10,7 +10,7 @@ IRB.conf[:PROMPT_MODE] = :SIMPLE
 # autoindent of code while typing it
 IRB.conf[:AUTO_INDENT]=true
 
-%w[rubygems looksee wirble hirb].each do |gem|
+%w[rubygems wirble].each do |gem|
   begin
     require gem
   rescue LoadError => err
@@ -18,14 +18,12 @@ IRB.conf[:AUTO_INDENT]=true
   end
 end
 
-Hirb::View.disable if defined?(Hirb)
-
 class Object
   # list methods which aren't in superclass
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
