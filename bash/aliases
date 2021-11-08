@@ -23,7 +23,6 @@ alias xd='pushd +1' 			# use xd instead of pushd +1
 alias shis="history | grep "		# search history
 
 # apps
-alias tm='mate .'
 alias bb='bbedit -c'
 alias mvm='mvim .'
 alias vm='vim .'
