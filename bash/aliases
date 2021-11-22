@@ -49,6 +49,7 @@ alias gtb='git branch -a'
 alias gtch='git checkout -'
 alias gtchd='git checkout develop'
 alias gtchm='git checkout master'
+alias gtchs='git checkout staging'
 alias gtr='git reset HEAD '
 alias gtrm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias gtsh="git show --pretty"
