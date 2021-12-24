@@ -128,6 +128,9 @@ nmap dbg <Esc>:s/var//g<left><left>
 " Common search/replace to wrap erb lines
 nmap wrp <Esc>:s/, /,\r      /g<left><left>
 
+" Common search/replace to join lines, separating with comma
+nmap tst <Esc>:%s/def test_\(.*\)/test "\1" do/g
+
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
 
