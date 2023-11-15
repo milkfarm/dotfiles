@@ -11,7 +11,7 @@ alias lf="ls -l | egrep -v '^d'"	# list files
 alias ldir="ls -l | egrep '^d'"		# list dirs
 
 # find
-alias ltree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
+alias tree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
 function findn() { find . -name "*${1}*"; }
 function findp() { find . -path "*${1}*"; }
 
