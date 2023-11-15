@@ -7,12 +7,12 @@ https://github.com/tpope/vim-ragtag.git
 )
 dir=$HOME/.janus
 
-# Create directory
+# Check for janus directory
 if [ ! -d "$dir" ]; then
-  echo "Creating directory '$(basename $dir)'..."
-  mkdir $dir
+  echo "! Error: Janus not installed"
+  exit 1
 fi
-cd $dir || exit 1
+cd $dir
 
 # Install plugins
 for url in ${urls[@]}; do
