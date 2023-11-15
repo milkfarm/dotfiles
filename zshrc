@@ -110,3 +110,5 @@ fi
 [[ -f ~/.zsh/aliases ]] && . ~/.zsh/aliases
 [[ -f ~/.zsh/completion ]] && . ~/.zsh/completion
 [[ -f ~/.localrc ]] && . ~/.localrc
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
