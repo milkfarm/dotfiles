@@ -1,3 +1,5 @@
+# Generated from ~/.dotfiles/gitconfig.erb at <%= Time.now %>
+# WARNING: Manual edits risk being overwritten
 [init]
   templatedir = ~/.git_template
 [push]
@@ -6,8 +8,21 @@
 	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
 	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
 [alias]
-	co = checkout
+  co = checkout
   ctags = "!sh -c '[ -f .git/hooks/ctags ] || git init; .git/hooks/ctags' git-ctags"
+  cm = !git add -A && git commit -m
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  unsave = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  wip = commit -am 'WIP'
+  undo = reset HEAD~1 --mixed
+  edit = commit --amend
+  amend = commit --amend --no-edit
+  amendall = commit -a --amend --no-edit
+  logx = log --graph --pretty=format:'%C(yellow)%H%Creset%C(green)%d%Creset %s %C(normal ul)%cr%Creset %C(cyan)%an%Creset' --date=relative
+  logd = log --pretty=format:'%C(yellow)%h%Creset%C(green)%d%Creset %s %C(normal ul)%ad%Creset %C(cyan)%an%Creset' --date=short
+  logt = log --pretty=format:'%C(yellow)%h%Creset%C(green)%d%Creset %s %C(normal ul)%ai%Creset %C(cyan)%an%Creset'
+  logs = log --pretty=format:'%C(yellow)%h%Creset%C(green)%d%Creset %s (%C(normal ul)%ad%Creset) %C(cyan)%an%Creset' --date='format:%Y-%m-%d %H:%M'
+  lsa = log --oneline --decorate --graph --all
 [color]
 	diff = auto
 	status = auto
