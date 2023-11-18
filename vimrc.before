@@ -6,4 +6,4 @@ call janus#disable_plugin('tlib', "I don't think I use it (and it displays an er
 let g:snipMate = { 'snippet_version' : 1 }
 
 " Homebrew installed fzf
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
