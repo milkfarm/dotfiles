@@ -2,6 +2,8 @@
 call janus#disable_plugin('csv', "I don't like it")
 call janus#disable_plugin('ctrlp', "Intermittently doesn't work; use fzf instead")
 call janus#disable_plugin('tlib', "I don't think I use it (and it displays an error message on startup")
+" Avoid deprecated snipmate
+let g:snipMate = { 'snippet_version' : 1 }
 
 " Homebrew installed fzf
 set rtp+=/usr/local/opt/fzf
