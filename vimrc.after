@@ -208,3 +208,8 @@ source ~/.dotfiles/vim/open_view_in_browser.vim
 
 source ~/.dotfiles/vim/tabline.vim
 source ~/.dotfiles/vim/ctags.vim
+
+" TODO: Janus isn't loading gvimrc.after for MacVim
+if has("gui_macvim")
+  source ~/.dotfiles/gvimrc.after
+endif
