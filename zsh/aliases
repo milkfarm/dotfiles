@@ -19,7 +19,7 @@ function findp() { find . -path "*${1}*"; }
 alias u=pushd  				# use u instead of pushd
 alias o=popd   				# use o instead of popd
 alias d='dirs -v'			# use d instead of dirs -v
-alias xd='pushd +1' 			# use xd instead of pushd +1
+alias xd='cd ${dirstack[1]}' 			# return to previous directory
 
 # other
 alias shis="history | grep "		# search history
