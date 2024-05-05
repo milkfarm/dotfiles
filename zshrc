@@ -4,6 +4,8 @@ PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 PATH="/opt/homebrew/opt/node@14/bin:$PATH"
 PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
+PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
 export PATH
 
 # Path to your oh-my-zsh installation.
