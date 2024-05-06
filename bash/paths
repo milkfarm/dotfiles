@@ -1,5 +1,5 @@
 # PATH
-#PATH="/usr/local/opt/node@14/bin:$PATH"
+PATH="/usr/local/opt/node@16/bin:$PATH"
 PATH="~/.rvm/bin:$PATH"
 PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
@@ -21,6 +21,6 @@ export EDITOR="mvim -f"
 # Register the ONIX DTD in the system XML Catalog
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog/onix/catalog.xml $XML_CATALOG_FILES"
 
-# Set flags for compilers to find node@14
-#export LDFLAGS="-L/usr/local/opt/node@14/lib"
-#export CPPFLAGS="-I/usr/local/opt/node@14/include"
+# Set flags for compilers to find node
+export LDFLAGS="-L/usr/local/opt/node@16/lib"
+export CPPFLAGS="-I/usr/local/opt/node@16/include"
