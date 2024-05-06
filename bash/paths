@@ -1,4 +1,11 @@
-export PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/bin:/usr/local/sbin:~/.rvm/bin:/usr/local/opt/node@14/bin:$PATH"
+# PATH
+#PATH="/usr/local/opt/node@14/bin:$PATH"
+PATH="~/.rvm/bin:$PATH"
+PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/bin:/usr/local/sbin:$PATH"
+PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
+export PATH
+
+# MANPATH
 export MANPATH="/usr/local/man:/usr/local/git/man:$MANPATH"
 
 # Mac Lion Xcode 4.2 compiler issue
@@ -8,11 +15,6 @@ export MANPATH="/usr/local/man:/usr/local/git/man:$MANPATH"
 # Gemdoc
 export GEMDIR=`gem env gemdir`
 
-# Python PATH for Python
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-export PATH
-
 # Set MacVim as the default editor
 export EDITOR="mvim -f"
 
@@ -20,5 +22,5 @@ export EDITOR="mvim -f"
 export XML_CATALOG_FILES="/usr/local/etc/xml/catalog/onix/catalog.xml $XML_CATALOG_FILES"
 
 # Set flags for compilers to find node@14
-export LDFLAGS="-L/usr/local/opt/node@14/lib"
-export CPPFLAGS="-I/usr/local/opt/node@14/include"
+#export LDFLAGS="-L/usr/local/opt/node@14/lib"
+#export CPPFLAGS="-I/usr/local/opt/node@14/include"

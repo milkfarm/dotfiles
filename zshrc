@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 PATH="/opt/homebrew/opt/libpq/bin:$PATH"
-PATH="/opt/homebrew/opt/node@14/bin:$PATH"
+#PATH="/opt/homebrew/opt/node@14/bin:$PATH"
 PATH="/opt/homebrew/opt/python@3.11/libexec/bin:$PATH"
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
