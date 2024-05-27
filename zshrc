@@ -117,3 +117,10 @@ fi
 [[ -f ~/.localrc ]] && . ~/.localrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# asdf: Must follow oh-my-zsh
+ . "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit

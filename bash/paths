@@ -1,6 +1,6 @@
 # PATH
 PATH="/usr/local/opt/node@16/bin:$PATH"
-PATH="~/.rvm/bin:$PATH"
+#PATH="~/.rvm/bin:$PATH"
 PATH="~/bin:~/.localbin:~/.bin:~/.sbin:/usr/local/bin:/usr/local/sbin:$PATH"
 PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH"
 export PATH

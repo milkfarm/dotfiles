@@ -9,7 +9,7 @@ if [ -f ~/.localrc ]; then
 fi
 
 # rvm: see also bash/paths
-if [[ -s "${HOME}/.rvm/scripts/rvm" ]] ; then source "${HOME}/.rvm/scripts/rvm" ; fi
+#if [[ -s "${HOME}/.rvm/scripts/rvm" ]] ; then source "${HOME}/.rvm/scripts/rvm" ; fi
 
 # RVM creates the following entry. Place in bash/paths instead.
 # PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

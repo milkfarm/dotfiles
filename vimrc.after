@@ -186,7 +186,7 @@ colorscheme solarized
 set statusline=%f
 set statusline+=\ [%{strlen(&fenc)?&fenc:&enc}]
 set statusline+=\ %{fugitive#statusline()}
-set statusline+=\ %{rvm#statusline()}
+"set statusline+=\ %{rvm#statusline()}
 set statusline+=\ Line:%l\/%L
 set statusline+=\ Col:%c
 
