@@ -79,7 +79,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git rails zsh-autosuggestions you-should-use
-  copybuffer copypath macos history
+  copybuffer copypath macos history zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
