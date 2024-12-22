@@ -117,6 +117,7 @@ fi
 [[ -f ~/.localrc ]] && . ~/.localrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(zoxide init zsh)"
 
 # asdf: Must follow oh-my-zsh
  . "$HOME/.asdf/asdf.sh"
