@@ -29,15 +29,17 @@ alias shis="history | grep "		# search history
 # apps
 alias bb='bbedit -c'
 alias mvm='mvim .'
+alias nvm='nvim .'
 alias vm='vim .'
 
 # git
 alias gts='git status'
 alias gtsl='git stash list'
-alias gtd='git diff | mvim -f -'
-alias gtdc='git diff --cached | mvim -f -'
-alias gtdh='git diff HEAD | mvim -f -'
-alias gtds='git stash show --patch | mvim -f -'
+alias gtdm='git diff | mvim -f -'
+alias gtd='git diff | nvim'
+alias gtdc='git diff --cached | nvim'
+alias gtdh='git diff HEAD | nvim'
+alias gtds='git stash show --patch | nvim'
 alias gtco='git checkout -- '
 alias gta='git add -A && git status'
 alias gtc='git commit -v'
