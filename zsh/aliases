@@ -9,6 +9,8 @@ alias ll="ls -l"
 alias la='ls -A'
 alias lf="ls -l | egrep -v '^d'"	# list files
 alias ldir="ls -l | egrep '^d'"		# list dirs
+alias es="eza --color=always --icons=always --long --git --no-filesize --no-time --no-user --no-permissions"
+alias et="eza --color=always --icons=always --tree --long --git --no-filesize --no-time --no-user --no-permissions"
 
 # find
 alias tree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
