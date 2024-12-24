@@ -116,10 +116,10 @@ nmap cma <Esc>:%s/\n/, /g<left><left><left>
 " Common search/replace to split lines, separating on comma
 nmap ret <Esc>:s/, /\r/g<left><left>
 
-" Common search/replace to update ruby hash synax
+" Common search/replace to update ruby hash syntax
 nmap hsh <Esc>:%s/:\(\w\+\) => /\1: /gc
 
-" Common search/replace to update ruby hash synax
+" Common search/replace to update ruby hash syntax
 nmap qt <Esc>:s/"/'/g
 
 " Common search/replace to setup debug line
