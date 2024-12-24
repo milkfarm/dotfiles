@@ -1,0 +1,4 @@
+# open arguments in default editor
+function v() {
+  $EDITOR "$@";
+}
