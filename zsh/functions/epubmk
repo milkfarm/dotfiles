@@ -1,0 +1,2 @@
+# create epub file using contents of current directory
+function epubmk() { epubmk.sh "$@"; }

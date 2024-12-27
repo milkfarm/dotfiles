@@ -1,0 +1,2 @@
+# open files found by ack in mvim
+vack () { mvim -f $(ack -l $@); }

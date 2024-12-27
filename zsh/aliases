@@ -14,8 +14,6 @@ alias et="eza --color=always --icons=always --tree --long --git --no-filesize --
 
 # find
 alias tree="find . -type d | sed -e 1d -e 's/[^-][^\/]*\//--/g' -e 's/^/   /' -e 's/-/|-/'"
-function findn() { find . -name "*${1}*"; }
-function findp() { find . -path "*${1}*"; }
 
 # push, pop, dirs
 alias u=pushd  				# use u instead of pushd
@@ -71,35 +69,10 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-# changing directory to code project
-function c { pushd $CODE/$1; }
-function p { pushd $PROJECTS/$1; }
-function s { pushd $SITES/$1; }
-
 # misc
 alias ctags_generate="ctags -R --exclude='.git' --exclude='log' --exclude='public' --exclude='tmp' --exclude='*.js' *"
 alias epubchk='java -jar ~/Documents/epubcheck-4.2.4/epubcheck.jar'
 alias epubchk3='java -jar ~/Documents/epubcheck-3.0.1/epubcheck-3.0.1.jar'
-
-# gemdoc
-function gemdoc {
-  open $GEMDIR/doc/`$(which ls) $GEMDIR/doc | grep $1 | sort | tail -1`/rdoc/index.html
-}
-
-# move files to mac trash can
-trash () { mv -iv $@ ~/.Trash/ ; }
-
-# count files of certain pattern
-cnt () { ls $@ | wc -l; }
-
-# open files found by ack in mvim
-vack () { mvim -f $(ack -l $@); }
-
-# create epub file using contents of current directory
-function epubmk() { epubmk.sh "$@"; }
-
-# unzip epub file
-function epubopen() { epubopen.sh "$@"; }
 
 # ingest files in user directories
 alias ingest="bundle exec rails runner -e development 'Ingestion.process_user_directories(mtime: 1)'"

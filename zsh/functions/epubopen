@@ -1,0 +1,2 @@
+# unzip epub file
+function epubopen() { epubopen.sh "$@"; }

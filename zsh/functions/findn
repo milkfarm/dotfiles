@@ -1,0 +1,1 @@
+function findn() { find . -name "*${1}*"; }

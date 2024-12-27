@@ -1,0 +1,2 @@
+# count files of certain pattern
+cnt () { ls $@ | wc -l; }
