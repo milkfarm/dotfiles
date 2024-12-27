@@ -35,6 +35,7 @@ let &colorcolumn=join(range(81,999),",")
 set incsearch  " Highlight while searching
 set hlsearch   " Highlight matches after searching
 nmap <leader>h :nohlsearch<CR>
+nmap <leader>nh :nohlsearch<CR>
 
 " Case-insensitive command completion
 "set noignorecase
@@ -133,6 +134,7 @@ nmap tst <Esc>:%s/def test_\(.*\)/test "\1" do/g
 
 " NERDTreeFind
 nmap ,m :NERDTreeFind<CR>
+nmap <Leader>,m :NERDTreeFind<CR>
 
 " EasyMotion
 " Disable default mappings
@@ -208,6 +210,12 @@ source ~/.dotfiles/vim/open_view_in_browser.vim
 
 source ~/.dotfiles/vim/tabline.vim
 source ~/.dotfiles/vim/ctags.vim
+
+" Save all
+nmap <C-S-s> :wall<CR>
+
+" Quit all
+nmap <Leader>qq :qa<CR>
 
 " TODO: Janus isn't loading gvimrc.after for MacVim
 if has("gui_macvim")
