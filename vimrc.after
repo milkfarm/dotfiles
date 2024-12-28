@@ -143,6 +143,7 @@ nmap <Leader>,m :NERDTreeFind<CR>
 let g:EasyMotion_smartcase = 1
 "map <Leader> <Plug>(easymotion-prefix)
 nmap s <Plug>(easymotion-overwin-f)
+nmap <Leader>hw <Plug>(easymotion-overwin-f)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
