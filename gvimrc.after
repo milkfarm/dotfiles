@@ -11,11 +11,11 @@ if has("gui_macvim")
   macmenu &File.New\ Tab key=<D-t>
   macmenu &File.Open\ Tab\.\.\. key=<nop>
 
-  " Map command-T to fzf
-  map <C-S-t> :Files<CR>
-  imap <C-S-t> <Esc>:Files<CR>
-  map <C-S-h> :History<CR>
-  imap <C-S-h> <Esc>:History<CR>
-  map <C-S-b> :Buffers<CR>
-  imap <C-S-b> <Esc>:Buffers<CR>
+  " Add shortcuts for fzf
+  map <C-t> :Files<CR>
+  imap <C-t> <Esc>:Files<CR>
+  map <C-h> :History<CR>
+  imap <C-h> <Esc>:History<CR>
+  map <C-b> :Buffers<CR>
+  imap <C-b> <Esc>:Buffers<CR>
 endif

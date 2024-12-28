@@ -212,7 +212,7 @@ source ~/.dotfiles/vim/tabline.vim
 source ~/.dotfiles/vim/ctags.vim
 
 " Save all
-nmap <C-S-s> :wall<CR>
+nmap <C-s> :wall<CR>
 
 " Quit all
 nmap <Leader>qq :qa<CR>
