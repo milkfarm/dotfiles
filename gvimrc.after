@@ -7,19 +7,22 @@ highlight Search guibg=#447788 guifg=#66eeff
 set guitablabel=%N:%M%t
 
 if has("gui_macvim")
+  " Add support for option ("M-") key
+  set macmeta
+
   " Override MacVim commands for creating tab
   macmenu &File.New\ Tab key=<D-t>
   macmenu &File.Open\ Tab\.\.\. key=<nop>
 
   " Add shortcuts for fzf
-  map <C-t> :Files<CR>
-  imap <C-t> <Esc>:Files<CR>
+  map <M-T> :Files<CR>
+  imap <M-T> <Esc>:Files<CR>
   nmap <leader>ft :Files<CR>
   nmap <leader>ff :Files<CR>
-  map <C-h> :History<CR>
-  imap <C-h> <Esc>:History<CR>
+  map <M-H> :History<CR>
+  imap <M-H> <Esc>:History<CR>
   nmap <leader>fh :History<CR>
-  map <C-b> :Buffers<CR>
-  imap <C-b> <Esc>:Buffers<CR>
+  map <M-B> :Buffers<CR>
+  imap <M-B> <Esc>:Buffers<CR>
   nmap <leader>fb :Buffers<CR>
 endif
