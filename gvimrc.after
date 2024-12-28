@@ -14,8 +14,12 @@ if has("gui_macvim")
   " Add shortcuts for fzf
   map <C-t> :Files<CR>
   imap <C-t> <Esc>:Files<CR>
+  nmap <leader>ft :Files<CR>
+  nmap <leader>ff :Files<CR>
   map <C-h> :History<CR>
   imap <C-h> <Esc>:History<CR>
+  nmap <leader>fh :History<CR>
   map <C-b> :Buffers<CR>
   imap <C-b> <Esc>:Buffers<CR>
+  nmap <leader>fb :Buffers<CR>
 endif
