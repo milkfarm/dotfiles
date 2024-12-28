@@ -7,16 +7,9 @@ highlight Search guibg=#447788 guifg=#66eeff
 set guitablabel=%N:%M%t
 
 if has("gui_macvim")
-  " Fix ri help bug
-  "set noballooneval
-
   " Override MacVim commands for creating tab
   macmenu &File.New\ Tab key=<D-t>
   macmenu &File.Open\ Tab\.\.\. key=<nop>
-
-  " Map command-T to CtrlP
-  "map <D-T> :CtrlPMRU<CR>
-  "imap <D-T> <Esc>:CtrlPMRU<CR>
 
   " Map command-T to fzf
   map <C-S-t> :Files<CR>
@@ -25,9 +18,4 @@ if has("gui_macvim")
   imap <C-S-h> <Esc>:History<CR>
   map <C-S-b> :Buffers<CR>
   imap <C-S-b> <Esc>:Buffers<CR>
-
-  " Command-/ to toggle comments THIS ISNT WORKING!!!
-  "map <D-/> <Plug>NERDCommenterToggle<CR>
-  "imap <D-/> <Esc><Plug>NERDCommenterToggle<CR>i
-  "map <D-/> <Leader>c<space><CR>
 endif
